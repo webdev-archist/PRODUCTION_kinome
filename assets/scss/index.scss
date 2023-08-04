@@ -1,0 +1,321 @@
+@import "./main.scss";
+
+
+
+
+
+.slick-slider.slick-initialized{
+  width: 100%;
+  box-shadow: 0 0 10px 1px;
+  border: 1px solid;
+  >button{
+    background:brown;
+    width: 50px;
+    height: 50px;
+    z-index: 9;
+    &::before{
+      padding:.5em;
+    }
+    &:first-of-type{
+        border-radius: 100px 0 0 100px;
+    }
+    &:last-of-type{
+      border-radius: 0 100px 100px 0;
+    }
+  }
+  >div.slick-list{
+    height: 700px !important;
+    >.slick-track{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      >div.slick-slide{
+        height: 100%;
+        >div{
+          height: 100%;
+
+          display: flex;
+          align-items: center;
+          text-align: center;
+          >section{
+            height: 100%;
+            width: 45%;
+            >h1{}
+            >h4{}
+            >p{}
+            >img{object-fit: contain;}
+          }
+        }
+      }
+    }
+  }
+  >ul{position: relative;bottom:0;}
+}
+
+/***********************************/
+/***********************************/
+/***********************************/
+body{}
+
+
+
+body{
+  >div{
+    >header{
+      >a{
+        display: flex;
+        align-items:center;
+        >img{height:5em;}
+        >hgroup{
+            text-align:center;
+            >h1{font-size:2.5em;margin:0;}
+            >h2{font-size:1.5em;margin:.5em 0 0;}
+        }
+      }
+      >section{
+        position: absolute;
+        top: 1em;
+        &.account{
+          right: 1em;
+          >a{
+            background: url("/img/signin.svg");
+          }
+        }
+        &.cart{
+          right: calc(1em + 50px);
+          >a{
+            position: relative;
+            background: url("/img/cart.svg");
+            >span{
+              position: absolute;
+              bottom: 0px;
+              left: -15px;
+              background: red;
+              display: block;
+              width: 18px;
+              height: 18px;
+              text-align: center;
+              color: white;
+              border-radius: 5px;
+            }
+          }
+        }
+        &.search{
+          right: calc(1em + 150px);
+          >form{
+            >input{
+              padding:.25em;
+              transition: width .2s;
+              &[type="text"]{
+                width: 100px;
+                &:focus{width: 200px;}
+              }
+            }
+          }
+        }
+        >a{
+          display: block;
+          width:30px;
+          height:30px;
+          background-size: contain !important;
+        }
+      }
+    }
+    >nav{
+      >ul{
+        display:flex;
+        gap:1em;
+        &>li{
+          position:relative;
+          &:first-of-type:before{
+            font-family: 'Font Awesome 6 Free';
+            content:"\\e1b0";
+            font-weight:900;
+          }
+          &:not(:first-of-type):after{
+            content:">";
+            position:absolute;
+            left:-.75em;
+          }
+        }
+      }
+    }
+    >main{
+      padding: 2em;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      >section{
+        position: relative;
+        margin: 1em 0;
+        padding: 1em;
+        box-shadow: 0 0 10px 1px;
+        border-radius: 5px;
+        width: 100%;
+        &#fondateurs{
+          >ul{
+            @extend %cards_block;
+          }
+        }
+        &#listLastExpos,&#nowExpo{
+          padding: 1em 0;
+          width: 45%;
+          >h2,>h3,>h4{
+            text-align: center;
+          }
+          >p{
+            text-align: justify;
+            padding: 0 1em;
+          }
+          >img{
+            margin: 1em 0;
+          }
+          >ul{
+            >li{
+              position: absolute;
+              >figure{
+                >img{
+                
+                }
+                >figcaption{
+
+                }
+              }
+            }
+          }
+        }
+      }
+      >article{
+      }
+      .carte{
+      }
+    }
+    >footer{
+      >h4{
+      }
+      >h5,>a{}
+      >h5{
+      }
+      >a{
+      }
+
+      menu{
+        &.SNS{
+          display: flex;
+          gap: 20px;
+          position: relative;
+          width: calc(100% - 266px);
+          >li{
+            &#fb>a{
+              background: url("/img/fb.svg") center center no-repeat;
+            }
+            &#whatsapp>a{
+              background: url("/img/whatsapp.svg") center center no-repeat;
+            }
+            &#ytube>a{
+              background: url("/img/youtube.svg") center center no-repeat;
+            }
+            &#instam>a{
+              background: url("/img/instagram.svg") center center no-repeat;
+            }
+            &#tiktok>a{
+              background: url("/img/tiktok.svg") center center no-repeat;
+            }
+            &#blogB>a{
+              background: url("/img/blog.svg") center center no-repeat;
+              >span{
+                margin-top: 10px;
+                margin: 1.5em -10px;
+                display: inline-block;
+              }
+            }
+            a{
+              background-size: contain !important;
+              position: relative;
+              transition:all .4s;
+              height: 25px;
+              width: 30px;
+              display: inline-block;
+              &:hover{
+                height: 50px;
+                width: 50px;
+              }
+            }
+            // &#blogB{
+            //   img{height: 50px;}
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width:$mobile){
+  body{
+    >header{
+      height:75px;
+      text-align: center;
+      >a{>i{}}
+      >img{}
+    }
+    >nav{
+      >form{
+        >input{}
+        >label{>i{}}
+      }
+      >section{
+        >h1{}
+        >p{}
+        >a{}
+      }
+    }
+    >main{
+      >section{}
+      >article{}
+    }
+    >footer{
+      >ul{}
+    }
+  }
+}
+@media all and (min-width:$mobile) and (max-width:$tablette){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$desktop) and (max-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
+@media all and (min-width:$tv){
+  body{
+    &>header{}
+    &>nav{}
+    &>main{
+      &>section{}
+      &>article{}
+    }
+    &>footer{
+      &>ul{}
+    }
+  }
+}
