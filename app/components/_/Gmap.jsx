@@ -1,3 +1,5 @@
+"use client"
+
 // npm install @googlemaps/react-wrapper
 import React from 'react'
 import { Wrapper, Status } from "@googlemaps/react-wrapper"

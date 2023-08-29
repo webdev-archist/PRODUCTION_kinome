@@ -15,7 +15,7 @@ export default function NowExpo() {
             <h3>Le sourire de la femme </h3>
             <h4>Fakhoury Artiste</h4>
             <Image
-                loader={myLoader}
+                // loader={myLoader}
                 src={"/img/fb_pages.svg"}
                 alt="Puissance Divine :  vente en ligne chrÃ©tien catholique, Puissance Divine :  vente en ligne religieux, Puissance Divine :  maria valtorta, Puissance Divine :  librairie vente en ligne, Puissance Divine :  maria valtorta, "
                 title="sainte bible tob,  librairie ecommerce,  acheter publication religieuse chrÃ©tienne, ecommerce chrÃ©tien,  librairie ecommerce, "

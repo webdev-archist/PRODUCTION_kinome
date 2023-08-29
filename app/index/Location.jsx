@@ -1,4 +1,4 @@
-import Gmap from "../../components/_/Gmap"
+import Gmap from "../components/_/Gmap"
 
 export default function Location() {
   return (
