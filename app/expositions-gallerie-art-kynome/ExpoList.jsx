@@ -1,6 +1,15 @@
+'use client'
+
+import { useContext } from 'react'
+import GlobalContext from "../GlobalContext"
 
 
-export default function ExpoList({type,datas=[]}) {
+
+
+export default function ExpoList({type="past"}) {
+
+  const {expoSelected: datas} = useContext(GlobalContext)
+  
   return (<section className="exposList">
     <h2>LISTE DES EXPOSITIONS {type=="past"?"PASSÉES":"À VENIR"}: </h2>
     <ul>

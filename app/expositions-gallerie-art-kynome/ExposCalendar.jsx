@@ -3,7 +3,7 @@ import CustomDatePicker from "./CustomDatePicker"
 
 
 
-export default function ExposCalendar({setExpoSelected}) {
+export default function ExposCalendar() {
 
 
 
@@ -28,7 +28,7 @@ export default function ExposCalendar({setExpoSelected}) {
                 </fieldset>
             </form> */}
             <div className="datepicker">
-                <CustomDatePicker {...{setExpoSelected}} />
+                <CustomDatePicker />
             </div>
             <ul id="expo_results">
 

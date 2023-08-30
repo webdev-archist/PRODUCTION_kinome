@@ -1,13 +1,17 @@
-import { useState, useEffect } from 'react'
+'use client'
+
+import { useContext, useState, useEffect } from 'react'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import { subDays, addDays, setHours, setMinutes, addMonths } from 'date-fns';
+import GlobalContext from "../GlobalContext"
 
 
 
-export default function CustomDatePicker({setExpoSelected}) {
+export default function CustomDatePicker() {
 
-    const [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
+    const {setExpoSelected} = useContext(GlobalContext)
+    , [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
     , [startDate, endDate] = dateRange
     , onChange = (update) => {
         // alert(+new Date(update[0]))

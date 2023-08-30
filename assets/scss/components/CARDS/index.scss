@@ -20,7 +20,8 @@
             box-shadow: 0 0 10px 1px;
         }
         >img{
-            width: 60%;
+            width: 60% !important;
+            position: relative !important;
             height: 300px;
             padding-right: 1em;
         }

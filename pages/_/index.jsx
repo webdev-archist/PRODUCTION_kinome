@@ -5,7 +5,7 @@ import Head from "next/head"
 import Link from 'next/link'
 import Slider from "react-slick";
 import Image from "next/image"
-import './page.module.css'
+// import './page.module.css'
 import NowExpo from "./index/NowExpo"
 import ListLastExpos from "./index/ListLastExpos"
 import KynomePost from "./index/KynomePost"

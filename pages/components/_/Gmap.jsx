@@ -11,10 +11,10 @@ export default function Gmap({style={height:"100px"}}) {
         return <h1>{status}</h1>
     }
     , [clicks, setClicks] = React.useState([])
-    , [zoom, setZoom] = React.useState(18) // initial zoom
+    , [zoom, setZoom] = React.useState(3) // initial zoom
     , [center, setCenter] = React.useState({
-        lat: 5.355955,
-        lng: -3.991632,
+        lat: 0,
+        lng: 0,
     })
 
     const onClick = (e) => {
@@ -39,9 +39,8 @@ export default function Gmap({style={height:"100px"}}) {
     return <Wrapper apiKey={"AIzaSyBJcEaaYtL4Y9RmWSDg10UW3dFFpUY6KXc"} render={render}>
         <Map center={center} zoom={zoom} style={style}>
             {clicks.map((latLng, i) => (<Marker key={i} position={latLng} />))}
-            <Marker position={[5.355955, -3.991632]} map={map} icon="/img/fb.svg" />
         </Map>
-        {/* <section>
+        <section>
             <fieldset>
                 <label htmlFor="lat">Latitude</label>
                 <input
@@ -70,7 +69,7 @@ export default function Gmap({style={height:"100px"}}) {
                 <input placeholder="Entrer nom lieu, ou coordonnées de géolocalisation" />
                 <button>🔍</button>
             </form>
-        </section> */}
+        </section>
     </Wrapper>
 }
 
@@ -151,9 +150,6 @@ const Marker = (options) => {
     React.useEffect(() => {
         if (!marker) {
             // setMarker(new google.maps.Marker())
-            // setMarker(new google.maps.Marker({
-            //     position: [5.355955, -3.991632],
-            // }))
             {}
         }
 
