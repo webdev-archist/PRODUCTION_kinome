@@ -1,9 +1,10 @@
 
 import Link from 'next/link'
-import Diapo from "../components/_/Diapo"
-import ExposCalendar from './ExposCalendar'
-import ExpoSelected from './ExpoSelected'
 import ExpoList from './ExpoList'
+import SubmitExpo from './SubmitExpo'
+import NowExpo from './NowExpo'
+import json from "./expos_datas.json"
+
 
 
 
@@ -13,21 +14,16 @@ export const metadata = {
 }
 
 
-export default function Expo() {
+export default () => {
 
 
 
     
     
     return <>
-        <main id="expositionsGallerieArtKynome">
-            <Diapo/>
-            <ExposCalendar />
-            <ExpoSelected>
-                <a href="#">lien vers l'expo en cours (as children)</a>
-            </ExpoSelected>
-            <ExpoList type="past" />
-            <ExpoList type="futur"/>
-        </main>
+        <NowExpo />
+        <SubmitExpo />
     </>
 }
+    {/* <ExpoList type="past" />
+            <ExpoList type="futur"/> */}

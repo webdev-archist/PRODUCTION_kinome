@@ -179,6 +179,20 @@ body{
         >form{
         }
         >div{
+          >h3{}
+          >ul{
+            >li{
+              >a{
+                display: block;
+                height: 50px;
+                position: relative;
+                >img{
+                  width:unset !important;
+
+                }
+              }
+            }
+          }
         }
       }
       &#location{
@@ -216,6 +230,56 @@ body{
 
               }
             }
+          }
+        }
+      }
+    }
+    &#expositionsGallerieArtKynome{
+      >div{}
+      >section{
+        &#exposCalendar{
+          display: flex;
+          justify-content: space-between;
+          align-items:center;
+          margin-inline: 3em;
+          transition: margin-inline .5s;
+          >a,span{
+            font-size: 8em;
+            transition: font-size .3s;
+          }
+          >span{
+            cursor:not-allowed;
+          }
+          &.expoAlreadySelected:not(:hover){margin-inline:0;}
+          &.expoAlreadySelected:not(:hover)>div{opacity:0;}
+          &.expoAlreadySelected:not(:hover)>a,span{font-size:3em;}
+          >div{
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            opacity:1;
+            transition: opacity .4s;
+            >ul{
+
+            }
+          }
+          .datepicker{
+
+          }
+        }
+      }
+      >section{
+        >h2{}
+        >form{
+          width: 50%;
+          margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap:1em;
+          padding:.5em;
+          >*{
+            padding:.5em;
+            width: 100%;
           }
         }
       }

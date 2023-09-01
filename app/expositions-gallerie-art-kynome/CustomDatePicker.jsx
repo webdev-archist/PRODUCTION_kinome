@@ -1,6 +1,7 @@
 'use client'
 
 import { useContext, useState, useEffect } from 'react'
+import Link from 'next/link'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import { subDays, addDays, setHours, setMinutes, addMonths } from 'date-fns';
@@ -10,7 +11,10 @@ import GlobalContext from "../GlobalContext"
 
 export default function CustomDatePicker() {
 
-    const {setExpoSelected} = useContext(GlobalContext)
+    // console.log(datas)
+
+    const {setActivedExpo,dates_before,dates_after} = useContext(GlobalContext)
+    // , [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
     , [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
     , [startDate, endDate] = dateRange
     , onChange = (update) => {
@@ -23,7 +27,7 @@ export default function CustomDatePicker() {
         au.value = b.toISOString().slice(0, 16)
         alert(a.toISOString().slice(0, 16))
         setDateRange(update);
-        setExpoSelected(update)
+        setActivedExpo(update)
     }
     , filterPassedTime = (time) => {
         const selectedDate = new Date(time);
@@ -59,7 +63,19 @@ export default function CustomDatePicker() {
         }
     }
 
-    return (
+
+
+    
+    // console.log(datas)
+    // console.log(dates)
+    console.log(dates_before)
+    // console.log(dates_after)
+    // console.log(activedExpo)
+
+    return (<>
+        <ul>
+            {dates_before.map((item,i) => <li test={i} key={"expo_date_"+i}><Link href={"/expositions-gallerie-art-kynome/"+i}>({item[0]+" --- "+item[1]})</Link></li>)}
+        </ul>
         <DatePicker
             // locale="fr-FR"
             dateFormat="d MMMM yyyy, h:mm aa"
@@ -96,5 +112,8 @@ export default function CustomDatePicker() {
             // dateFormat="MM/yyyy"
             todayButton="yuuhooo, today c'est ajd !!!"
         />
-    )
+        <ul>
+            {dates_after.map((item,i) => <li key={"expo_date_"+i}><Link href={"/expositions-gallerie-art-kynome/"+i}>({item[0]+" --- "+item[1]})</Link></li>)}
+        </ul>
+    </>)
 }

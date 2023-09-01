@@ -1,0 +1,174 @@
+[
+    {
+        "openningDate_$_date": "2023-08-01",
+        "closingDate_$_date": "2023-08-03",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433911",
+            "5e8840f6bcf86cd799433912"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433913",
+            "5e8840f6bcf86cd799433914"
+        ],
+        "slogan": "Une exposition surréaliste",
+        "title": "L'art surréaliste",
+        "descr": "Une exposition qui explore le mouvement surréaliste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Salvador_Dali_-_The_Persistence_of_Memory.jpg/1200px-Salvador_Dali_-_The_Persistence_of_Memory.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "123456789"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-08-05",
+        "closingDate_$_date": "2023-08-08",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433915"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433916"
+        ],
+        "slogan": "Une exposition impressionniste",
+        "title": "L'impressionnisme",
+        "descr": "Une exposition qui explore le mouvement impressionniste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Claude_Monet_-_Impression,_Sunrise.jpg/1200px-Claude_Monet_-_Impression,_Sunrise.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "987654321"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-08-13",
+        "closingDate_$_date": "2023-08-22",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433925"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433926"
+        ],
+        "slogan": "Une exposition abstraite",
+        "title": "L'art abstrait",
+        "descr": "Une exposition qui explore le mouvement abstrait à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Vasily_Kandinsky_-_Composition_VII.jpg/1200px-Vasily_Kandinsky_-_Composition_VII.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "234567890"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-09-02",
+        "closingDate_$_date": "2023-09-12",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433927",
+            "5e8840f6bcf86cd799433928"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433929",
+            "5e8840f6bcf86cd799433930"
+        ],
+        "slogan": "Une exposition cubiste",
+        "title": "Le cubisme",
+        "descr": "Une exposition qui explore le mouvement cubiste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Pablo_Picasso_-_Les_Demoiselles_d'Avignon.jpg/1200px-Pablo_Picasso_-_Les_Demoiselles_d'Avignon.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "345678901"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-08-25",
+        "closingDate_$_date": "2023-08-31",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433917",
+            "5e8840f6bcf86cd799433918"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433919",
+            "5e8840f6bcf86cd799433920"
+        ],
+        "slogan": "Une exposition surréaliste",
+        "title": "L'art surréaliste",
+        "descr": "Une exposition qui explore le mouvement surréaliste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Salvador_Dali_-_The_Persistence_of_Memory.jpg/1200px-Salvador_Dali_-_The_Persistence_of_Memory.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "123456789"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-08-23",
+        "closingDate_$_date": "2023-08-24",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433921",
+            "5e8840f6bcf86cd799433922"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433923",
+            "5e8840f6bcf86cd799433924"
+        ],
+        "slogan": "Une exposition impressionniste",
+        "title": "L'impressionnisme",
+        "descr": "Une exposition qui explore le mouvement impressionniste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Claude_Monet_-_Impression,_Sunrise.jpg/1200px-Claude_Monet_-_Impression,_Sunrise.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "987654321"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-09-15",
+        "closingDate_$_date": "2023-09-20",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433917",
+            "5e8840f6bcf86cd799433918"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433919",
+            "5e8840f6bcf86cd799433920"
+        ],
+        "slogan": "Une exposition surréaliste",
+        "title": "L'art surréaliste",
+        "descr": "Une exposition qui explore le mouvement surréaliste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Salvador_Dali_-_The_Persistence_of_Memory.jpg/1200px-Salvador_Dali_-_The_Persistence_of_Memory.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "123456789"
+            }
+        }
+    },
+    {
+        "openningDate_$_date": "2023-09-22",
+        "closingDate_$_date": "2023-09-25",
+        "artistes_$_ref_µ_artists": [
+            "5e8840f6bcf86cd799433921",
+            "5e8840f6bcf86cd799433922"
+        ],
+        "oeuvres_$_ref_µ_oeuvres": [
+            "5e8840f6bcf86cd799433923",
+            "5e8840f6bcf86cd799433924"
+        ],
+        "slogan": "Une exposition impressionniste",
+        "title": "L'impressionnisme",
+        "descr": "Une exposition qui explore le mouvement impressionniste à travers des peintures, des sculptures et des photographies.",
+        "affiche_$_file": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Claude_Monet_-_Impression,_Sunrise.jpg/1200px-Claude_Monet_-_Impression,_Sunrise.jpg",
+        "options": {},
+        "datas": {
+            "yt": {
+                "id": "987654321"
+            }
+        }
+    }
+]

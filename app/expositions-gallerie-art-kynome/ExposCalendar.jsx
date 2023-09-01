@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react'
 import CustomDatePicker from "./CustomDatePicker"
+import SpanArrow from "./SpanArrow"
 
 
 
@@ -9,7 +10,7 @@ export default function ExposCalendar() {
 
 
     return (
-        <section className="exposCalendar">
+        <section id="exposCalendar">
             {/* <form>
                 <fieldset id="input_artistes">
                     <label><span>input_artistes</span>
@@ -27,12 +28,11 @@ export default function ExposCalendar() {
                     </label>
                 </fieldset>
             </form> */}
+            <SpanArrow arrow="&lt;" />
             <div className="datepicker">
                 <CustomDatePicker />
             </div>
-            <ul id="expo_results">
-
-            </ul>
+            <SpanArrow arrow="&gt;" />
         </section>
     )
 }
