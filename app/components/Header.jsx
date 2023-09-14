@@ -27,8 +27,8 @@ export default function Header() {
         <menu className="header__mainMenu">
             <li><Link href="/">Accueil</Link></li>
             <li><Link href="/expositions-gallerie-art-kynome">Expos/Évenements</Link></li>
-            {/* <li><a href="/artistes-panafricains">Artistes</a></li> */}
-            {/* <li><a href="oeuvres-artistiques">Oeuvres artistiques</a></li> */}
+            <li><a href="/artistes-panafricains">Artistes</a></li>
+            <li><a href="/oeuvres-artistiques">Oeuvres artistiques</a></li>
         </menu>
         <section className="account">
             <SignedOut>

@@ -32,8 +32,13 @@ export default ({id}) => {
         reloadActivedExpo()
     }, [activedExpo])
 
+
+    console.log(dates)
+    console.log(activedExpo)
+    
+
     return <>
-        {/* {activedExpo} */}
+        {activedExpo.join(', ')}
     </>
 }
 

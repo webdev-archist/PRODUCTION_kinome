@@ -13,7 +13,7 @@ export default function CustomDatePicker() {
 
     // console.log(datas)
 
-    const {setActivedExpo,dates_before,dates_after} = useContext(GlobalContext)
+    const {activedExpo,setActivedExpo,dates_before,dates_after} = useContext(GlobalContext)
     // , [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
     , [dateRange, setDateRange] = useState([setHours(setMinutes(new Date(), 0), 9), null])
     , [startDate, endDate] = dateRange
@@ -66,8 +66,6 @@ export default function CustomDatePicker() {
 
 
     
-    // console.log(datas)
-    // console.log(dates)
     console.log(dates_before)
     // console.log(dates_after)
     // console.log(activedExpo)
@@ -113,7 +111,7 @@ export default function CustomDatePicker() {
             todayButton="yuuhooo, today c'est ajd !!!"
         />
         <ul>
-            {dates_after.map((item,i) => <li key={"expo_date_"+i}><Link href={"/expositions-gallerie-art-kynome/"+i}>({item[0]+" --- "+item[1]})</Link></li>)}
+            {dates_after.map((item,i) => <li key={"expo_date_"+(dates_before.length+i)}><Link href={"/expositions-gallerie-art-kynome/"+(dates_before.length+(activedExpo?1:0)+i)}>({item[0]+" --- "+item[1]})</Link></li>)}
         </ul>
     </>)
 }

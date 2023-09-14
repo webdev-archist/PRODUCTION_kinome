@@ -21,12 +21,9 @@ import {carouselHome} from "../../assets/carousels.js"
 
 
 export default function Carousel() {
-    let {settingsSlider} = useContext(AuthContext)
+    let {settingsSlider, myLoader} = useContext(AuthContext)
     , [h3, setH3] = useState("TROUVER UN TITRE")
     , [random_indexes, setRandom_indexes] = useState(new Set())
-    , myLoader = ({ src, width, quality }) => {
-        return `${src}?w=${width}&q=${quality || 75}`
-    }
     
     useEffect(() => {
         let random_indexes_ = random_indexes

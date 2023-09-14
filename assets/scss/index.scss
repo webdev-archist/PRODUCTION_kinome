@@ -154,8 +154,10 @@ body{
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    >iframe{
+    >*{
       width: 100%;
+    }
+    >iframe{
     }
     >section{
       position: relative;
@@ -163,7 +165,7 @@ body{
       // padding: 1em;
       // box-shadow: 0 0 10px 1px;
       border-radius: 5px;
-      width: 100%;
+      // width: 100%;
       text-align: justify;
       &#contact{
         display: flex;
@@ -234,10 +236,284 @@ body{
         }
       }
     }
+    &#oeuvresArtistiques{
+      >aside{
+        width: 0;
+        transition: all .3s;
+        &.active{
+          width: 50%;
+        }
+        &.modalL{
+          @extend %gof_tbl;
+        }
+        &.modalR{
+          @extend %gof_tbr;
+        }
+      }
+      >section{
+        &#kynome{
+          >h2{}
+          >p{}
+        }
+        &.figureCards div>a{
+          >figure{
+            position: relative;
+            transition: padding .3s;
+            &:hover{
+              padding: 1em;
+              border: 1px dotted;
+              border-radius: 5px;
+              box-shadow: 0 0 5px 1px inset;
+              img{
+              box-shadow: 0 0 10px 1px;
+              }
+            }
+            >picture{
+              position: relative;
+              display: block;
+              // width: 100px;
+              >img{
+                &:not(:last-of-type){
+                  background: red;
+                  position:absolute;
+                }
+              }
+            }
+            &:not(:hover)>figcaption{visibility:hidden;opacity: 0;font-size: .8em;}
+            >figcaption{
+              display: flex;
+              flex-flow: column;
+              align-items: flex-end;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 100%;
+              padding: 2em;
+              text-align: right;
+              opacity: 1;
+              font-size: 1.2em;
+              transition: all .4s;
+              >*{
+                padding: .2em;
+                padding-left: .5em;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+39,f2f2f2+100&0.5+0,0.5+39,1+100 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 39%,rgba(242,242,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+                border-left: solid black;
+                border-bottom: 1px dotted black;
+                border-radius: 50px 0 0 5px;
+                transition: all .3s;
+                &:hover{
+                  border-left-width: 12px;
+                  font-size: 1.3em;
+                  box-shadow: 0 0 10px 1px;
+                }
+              }
+              >h3{}
+              >a{
+                font-size: .8em;
+                border-color:blue;
+                &:hover{
+                  background: blue;
+                  color:white;
+                }
+              }
+              >p{
+                &:last-of-type{
+                  position: absolute;
+                  bottom: 0;
+                }
+              }
+            }
+            >span{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              width: 150px;
+              height: 150px;
+              top: calc(50% - 75px);
+              left: calc(50% - 75px);
+              font-size: 1em;
+              cursor: progress;
+              opacity: .3;
+              transition: all .3s, text-shadow 2s;
+              &:hover{
+                opacity: 1;
+                font-size: 2em;
+                text-shadow: 0 0 5px BLACK, 0 0 20px BLACK, 0 0 50px BLACK, 0 0 75px BLACK;
+                &:before{
+                  transform:rotate(360deg);
+                  border: 2px dotted;
+                  left:0%;
+                  top:0%;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              &:before{
+                content: "";
+                transition: all .3s, transform 3s linear;
+                border-radius: 100px;
+                left:50%;
+                top:50%;
+                width: 0%;
+                height: 0%;
+                position: absolute;
+                background: rgba(111, 111, 111, 0.5);
+                box-shadow: 0 0 10px 5px silver  inset;
+              }
+              >span{
+                z-index: 10;
+              }
+            }
+          }
+        }
+        &.productSection{
+          display: flex;
+          gap:2em;
+          height: 400px;
+          >a.close{
+            @extend %btn_close;
+          }
+          >figure{
+            width: 40%;
+            position: relative;
+            >picture{
+              >img{}
+            }
+            >figcaption{
+              position: absolute;
+              bottom: 0;
+              height: 20%;
+              display: flex;
+              width: 100%;
+              gap: 1em;
+              justify-content: space-evenly;
+              border-top: solid;
+              padding: 0.5em;
+              background: rgba(255,255,255,.5);
+              >img{
+                width: 20% !important;
+                position: relative !important;
+                cursor:pointer;
+                &:hover{box-shadow: 0 0 10px 1px black;}
+              }
+            }
+          }
+        }
+      }
+      >form{
+        &.searchBar{
+          // ....
+        }
+      }
+      >aside{
+        width: 50%;
+        box-shadow: 0 0 10px 1px;
+        z-index: 100;
+        &.modalL{border-right: 6px solid black;}
+        &.modalR{border-left: 6px solid black;}
+        >img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &#artistesPanafricains{
+      >section{
+        &#kynome{
+          >h2{}
+          >p{}
+        }
+        &#show_artiste{
+          display: flex;
+          >ul{
+            width: 30%;
+            >li{
+              position: relative;
+              height: 200px;
+              >img{
+
+              }
+            }
+          }
+          >div{
+            >p{
+              >a{}
+            }
+          }
+        }
+      }
+      >h3{}
+            @extend .searchBar;
+            /*
+            >form{
+              >fieldset{
+                text-align: center;
+                height: 4em;
+                >label{
+                  position: absolute;
+                  left: 25%;
+                  width: 50%;
+                  >*{
+                    width: 100%;
+                    padding: 0.5em;
+                  }
+                  >input{
+                  }
+                  >select{
+                  }
+                  &:first-of-type{
+                    z-index: 10;
+                    // text-align: center;
+                  }
+                  &:nth-of-type(2){
+                    z-index: 5;
+                    width: calc(50% + 35px);
+                  }
+                  &:last-of-type{
+                    z-index: 3;
+                    width: calc(50% + 70px);
+                    >select{
+                    }
+                  }
+                }
+              }
+              >ul{
+                @extend %cards_block;
+                justify-content: center;
+                background: rgba(0,0,0,.5);
+                border: solid;
+                border-top: none;
+                border-radius: 0 0 5px 5px;
+                >li{
+                  padding: 0;
+                  width: 10%;
+                  position: relative;
+                  >a{
+                    >figure{
+                      >img{
+                        // width: unset;
+                      }
+                      >figcaption{
+                        padding: 1em;
+                      }
+                      >span{
+                        @extend %goa_br;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            */
+    }
     &#expositionsGallerieArtKynome{
       >div{}
       >section{
         &#exposCalendar{
+          position: relative;
           display: flex;
           justify-content: space-between;
           align-items:center;
@@ -250,21 +526,190 @@ body{
           >span{
             cursor:not-allowed;
           }
-          &.expoAlreadySelected:not(:hover){margin-inline:0;}
-          &.expoAlreadySelected:not(:hover)>div{opacity:0;}
-          &.expoAlreadySelected:not(:hover)>a,span{font-size:3em;}
           >div{
-            display: flex;
-            align-items: center;
-            gap: 2em;
-            opacity:1;
-            transition: opacity .4s;
-            >ul{
+            &.datepicker{
+              display: flex;
+              align-items: center;
+              gap: 2em;
+              opacity:1;
+              transition: opacity .4s;
+              >ul{
 
+              }
             }
           }
-          .datepicker{
-
+          &figure#activedExpoImage{
+          }
+          &.doCurrentExpoExist:not(:hover){margin-inline:0;}
+          &.doCurrentExpoExist:not(:hover)>div{opacity:0;}
+          &.doCurrentExpoExist:not(:hover)>a,span{font-size:3em;}
+          &.doCurrentExpoExist{
+            >div.datepicker{
+            }
+            >figure#activedExpoImage{
+              z-index: -1;
+              position: absolute;
+              top:0;right:0;bottom:0;left:0;
+              opacity: 1;
+              transition: opacity .4s;
+              >img{height:100%;}
+            }
+            &:hover>figure#activedExpoImage{
+              opacity: 0;
+            }
+          }
+        }
+        &#expoSelected{
+          >h3{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            >span{
+              padding: 0.5em;
+              border-radius: 5px;
+              font-size: .85em;
+              width: 100px;
+              &.btn{}
+              &.status{}
+              &.category{}
+            }
+            >span:first-of-type{}
+            >span:last-of-type{}
+          }
+          >h4{
+            text-align: center;
+            >a{
+              width: 25px;
+              display: inline-block;
+              >img{
+                height: 100%;
+              }
+            }
+          }
+          >div{
+            &.expo_top{
+              height: 300px;
+            }
+            display: flex;
+            gap: 1em;
+            flex-direction: row;
+            border: 1px solid;
+            border-top: 0;
+            box-shadow: 0px 13px 10px 1px;
+            >*{
+              padding: 1em;
+              flex-basis: 100%;
+            }
+            >ul{
+              position: relative;
+              >li{
+                >span{}
+              }
+              &.expo_top_images{
+                >li{
+                  position: absolute;
+                  width: calc(100% - 2em);
+                  height: calc(100% - 2em);              
+                  >img{
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+              &.expo_top_details{
+                border-style: dotted;
+                border-width: 0 1px;
+                li{
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+            >p{}
+            &.expo_bottom{
+              >section{
+                display: flex;
+                &:first-of-type{
+                  flex: 1 5 100%;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  background: black;
+                  overflow-y:scroll;
+                  >h3{
+                    align-self: baseline;
+                    color: white;
+                  }
+                  >ul{
+                    display: flex;
+                    flex-flow: row wrap ;
+                    gap: 1em;
+                    width: 100%;
+                    max-height: 400px;
+                    background: black;
+                    align-items: center;
+                    justify-content: space-around;
+                    >li{
+                      border: solid white;
+                      padding: 0.25em;
+                      border-radius: 5px;
+                      >a{
+                        >h3{
+                          color:white;
+                        }
+                        >img{}
+                      }
+                    }
+                  }
+                }
+                &:last-of-type{
+                  overflow: hidden;
+                  flex-flow: column;
+                  background: black;
+                  >h3{
+                    color: white;
+                    text-align: center;
+                    border-bottom: solid white;
+                    margin-bottom: 1em;
+                  }
+                  >.swiper-container{
+                    width: 100%;
+                    span.swiper-pagination-bullet{
+                      height: 25px;
+                      border:1px solid white;
+                    }
+                    .swiper-slide {
+                      border: solid white;
+                      border-radius: 5px;
+                    }
+                    .swiper-slide-prev{border-color:red;}
+                    .swiper-slide-next{border-color:purple;}
+                    .swiper-button-prev{
+                      &:hover{
+                        text-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red, 0 0 10px red;
+                      }
+                    }
+                  }
+                }
+                >h3{
+                }
+                >ul{
+                  >li{
+                    >a{
+                      >h3{
+      
+                      }
+                      >img{}
+                    }
+                  }
+                  &.expo_bottom_artistes{
+                    border-right: solid;
+                  }
+                  &.expo_bottom_oeuvres{
+      
+                  }
+                }
+              }
+            }
           }
         }
       }

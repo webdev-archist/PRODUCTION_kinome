@@ -12,13 +12,22 @@
     "@clerk/nextjs": "^4.21.1",
     "@googlemaps/react-wrapper": "^1.1.35",
     "fast-equals": "^5.0.1",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
     "next": "13.4.16",
+    "next-gallery": "^1.2.1",
+    "npm": "^10.1.0",
     "react": "18.2.0",
     "react-datepicker": "^4.16.0",
     "react-dom": "18.2.0",
+    "react-id-swiper": "^4.0.0",
+    "react-photo-gallery": "^8.0.0",
+    "react-responsive-masonry": "^2.1.7",
     "react-slick": "^0.29.0",
     "sass": "^1.63.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "*",
+    "yet-another-react-lightbox": "^3.12.2"
   },
   "devDependencies": {
     "@types/react": "18.2.12",

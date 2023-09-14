@@ -1,0 +1,63 @@
+[
+    {
+        "oeuvres_$_ref": ["5e8840f6bcf86cd799433919", "5e8840f6bcf86cd799433920"],
+        "naissance_$_date": "1981-01-01",
+        "photos_$_file": ["github_pp.jpg", "okok.png"],
+        "avatar_$_file": ["signin.svg", "gsearch.svg"],
+        "SNSs": ["https://www.facebook.com/artist1", "https://twitter.com/artist1"],
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "pseudo": "jdupont",
+        "age": 41,
+        "email": "jdupont@gmail.com",
+        "tel": "+33 6 00 00 00 01",
+        "descr": "Artiste plasticien français, Jean Dupont est connu pour ses sculptures en bronze.",
+        "genre": "Moderne"
+    },
+    {
+        "oeuvres_$_ref": ["5e8840f6bcf86cd799433923", "5e8840f6bcf86cd799433924"],
+        "naissance_$_date": "1985-02-02",
+        "photos_$_file": ["github_pp.jpg", "okok.png"],
+        "avatar_$_file": ["signin.svg", "gsearch.svg"],
+        "SNSs": ["https://www.instagram.com/artist2", "https://www.linkedin.com/in/artist2"],
+        "nom": "Martin",
+        "prenom": "Marie",
+        "pseudo": "mmartin",
+        "age": 37,
+        "email": "mmartin@gmail.com",
+        "tel": "+33 6 11 11 11 11",
+        "descr": "Artiste peintre française, Marie Martin est connue pour ses portraits à l'huile.",
+        "genre": "Gothique"
+    },
+
+    {
+        "oeuvres_$_ref": ["5e8840f6bcf86cd799433917", "5e8840f6bcf86cd799433918"],
+        "naissance_$_date": "1990-03-03",
+        "photos_$_file": ["github_pp.jpg", "okok.png"],
+        "avatar_$_file": ["signin.svg", "gsearch.svg"],
+        "SNSs": ["https://www.youtube.com/channel/artist3", "https://www.tiktok.com/@artist3"],
+        "nom": "Leblanc",
+        "prenom": "Pierre",
+        "pseudo": "pleblanc",
+        "age": 32,
+        "email": "pleblanc@gmail.com",
+        "tel": "+33 6 22 22 22 22",
+        "descr": "Artiste photographe français, Pierre Leblanc est connu pour ses clichés de nature morte.",
+        "genre": "Classic"
+    },
+    {
+        "oeuvres_$_ref": ["5e8840f6bcf86cd799433921", "5e8840f6bcf86cd799433922"],
+        "naissance_$_date": "1995-04-04",
+        "photos_$_file": ["github_pp.jpg", "okok.png"],
+        "avatar_$_file": ["signin.svg", "gsearch.svg"],
+        "SNSs": ["https://www.pinterest.com/artist4", "https://www.soundcloud.com/artist4"],
+        "nom": "Blanchard",
+        "prenom": "Anne",
+        "pseudo": "ablanchard",
+        "age": 27,
+        "email": "ablanchard@gmail.com",
+        "tel": "+33 6 33 33 33 33",
+        "descr": "Artiste peintre française, Anne Blanchard est connue pour ses paysages urbains.",
+        "genre": "Abstrait"
+    }
+]

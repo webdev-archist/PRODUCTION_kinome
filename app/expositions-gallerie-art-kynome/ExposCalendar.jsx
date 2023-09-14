@@ -33,6 +33,7 @@ export default function ExposCalendar() {
                 <CustomDatePicker />
             </div>
             <SpanArrow arrow="&gt;" />
+            <figure id="activedExpoImage"></figure>
         </section>
     )
 }

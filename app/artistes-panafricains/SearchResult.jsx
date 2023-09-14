@@ -2,6 +2,10 @@
 
 
 export default function SearchResults({artist}) {
+
+
+  return 
+  {/* 
   return (
     <section>
         <figure>
@@ -16,10 +20,11 @@ export default function SearchResults({artist}) {
             <p>Genre artistique: {artist.genre}</p>
             <p>SNSs: {artist.SNS_links}</p>
             <p>Oeuvres: {artist.oeuvres}</p>
-            {/* afficher un bloc pour les phtoso, ou les fusionne rdans le figure */}
+            {// afficher un bloc pour les phtoso, ou les fusionne rdans le figure }
 
             <p>{artist.descr}</p>
         </div>
     </section>
   )
+  */}
 }

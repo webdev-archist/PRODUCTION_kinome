@@ -1,0 +1,230 @@
+[
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433919",
+            "5e8840f6bcf86cd799433920"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo1.jpg",
+            "https://example.com/photo2.jpg"
+        ],
+        "slogan": "Une sculpture surréaliste",
+        "title": "Le Téléphone",
+        "descr": "Sculpture en bronze représentant un téléphone surréaliste.",
+        "prix": "100 000 €",
+        "genre": "surréalisme"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433923",
+            "5e8840f6bcf86cd799433924"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo3.jpg",
+            "https://example.com/photo4.jpg"
+        ],
+        "slogan": "Une peinture impressionniste",
+        "title": "Le Pont du Japon",
+        "descr": "Peinture impressionniste représentant un pont japonais.",
+        "prix": "50 000 €",
+        "genre": "impressionnisme"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433917",
+            "5e8840f6bcf86cd799433918"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo5.jpg",
+            "https://example.com/photo6.jpg"
+        ],
+        "slogan": "Une sculpture abstraite",
+        "title": "Formes et couleurs",
+        "descr": "Sculpture abstraite en acier.",
+        "prix": "20 000 €",
+        "genre": "abstraction"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433921",
+            "5e8840f6bcf86cd799433922"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo7.jpg",
+            "https://example.com/photo8.jpg"
+        ],
+        "slogan": "Une photographie de nature morte",
+        "title": "Nature morte aux fruits",
+        "descr": "Photographie de nature morte représentant des fruits.",
+        "prix": "10 000 €",
+        "genre": "nature morte"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433925",
+            "5e8840f6bcf86cd799433926"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo9.jpg",
+            "https://example.com/photo10.jpg"
+        ],
+        "slogan": "Une sculpture moderne",
+        "title": "L'Homme qui marche",
+        "descr": "Sculpture moderne en bronze représentant un homme marchant.",
+        "prix": "50 000 €",
+        "genre": "moderne"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433927",
+            "5e8840f6bcf86cd799433928"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo11.jpg",
+            "https://example.com/photo12.jpg"
+        ],
+        "slogan": "Une peinture expressionniste",
+        "title": "La Femme au chapeau",
+        "descr": "Peinture expressionniste représentant une femme au chapeau.",
+        "prix": "40 000 €",
+        "genre": "expressionnisme"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433919",
+            "5e8840f6bcf86cd799433920"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo13.jpg",
+            "https://example.com/photo14.jpg"
+        ],
+        "slogan": "Une sculpture cubiste",
+        "title": "Le Cube",
+        "descr": "Sculpture cubiste en bois.",
+        "prix": "30 000 €",
+        "genre": "cubisme"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433923",
+            "5e8840f6bcf86cd799433924"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo15.jpg",
+            "https://example.com/photo16.jpg"
+        ],
+        "slogan": "Une photographie de paysage",
+        "title": "Paysage de montagne",
+        "descr": "Photographie de paysage représentant une montagne.",
+        "prix": "20 000 €",
+        "genre": "paysage"
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433919",
+            "5e8840f6bcf86cd799433920"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo17.jpg",
+            "https://example.com/photo18.jpg"
+        ],
+        "slogan": "Une sculpture monumentale",
+        "title": "La Femme géante",
+        "descr": "Sculpture monumentale en bronze représentant une femme géante.",
+        "prix": "100 000 €",
+        "genre": "surréalisme",
+        "materiaux": [
+            "bronze"
+        ],
+        "dimensions": [
+            "4 mètres de haut"
+        ],
+        "techniques": [
+            "fondu en bronze"
+        ]
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433923",
+            "5e8840f6bcf86cd799433924"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo19.jpg",
+            "https://example.com/photo20.jpg"
+        ],
+        "slogan": "Une peinture de grand format",
+        "title": "Le Pont de Paris",
+        "descr": "Peinture de grand format représentant un pont de Paris.",
+        "prix": "50 000 €",
+        "genre": "impressionnisme",
+        "materiaux": [
+            "huile sur toile"
+        ],
+        "dimensions": [
+            "2 mètres sur 3 mètres"
+        ],
+        "techniques": [
+            "peinture à l'huile"
+        ]
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433917",
+            "5e8840f6bcf86cd799433918"
+        ],
+        "released_$_date": "2023-08-15",
+        "photos_$_file": [
+            "https://example.com/photo21.jpg",
+            "https://example.com/photo22.jpg"
+        ],
+        "slogan": "Une sculpture abstraite minimaliste",
+        "title": "Formes géométriques",
+        "descr": "Sculpture abstraite minimaliste en acier.",
+        "prix": "20 000 €",
+        "genre": "abstraction",
+        "materiaux": [
+            "acier"
+        ],
+        "dimensions": [
+            "1 mètre sur 1 mètre"
+        ],
+        "techniques": [
+            "soudure"
+        ]
+    },
+    {
+        "artistes_$_ref": [
+            "5e8840f6bcf86cd799433921",
+            "5e8840f6bcf86cd799433922"
+        ],
+        "released_$_date": "2023-08-22",
+        "photos_$_file": [
+            "https://example.com/photo23.jpg",
+            "https://example.com/photo24.jpg"
+        ],
+        "slogan": "Une photographie de rue",
+        "title": "Un passant à Paris",
+        "descr": "Photographie de rue représentant un passant à Paris.",
+        "prix": "10 000 €",
+        "genre": "nature morte",
+        "materiaux": [
+            "argentique"
+        ],
+        "dimensions": [
+            "24x36 cm"
+        ],
+        "techniques": [
+            "argentique noir et blanc"
+        ]
+    }
+]
