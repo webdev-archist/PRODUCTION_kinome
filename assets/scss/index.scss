@@ -272,6 +272,8 @@ body{
               position: relative;
               display: block;
               // width: 100px;
+              transition:opacity .3s;
+              &.zoomingIn{opacity: .2;}
               >img{
                 &:not(:last-of-type){
                   background: red;
@@ -353,7 +355,7 @@ body{
               }
               &:before{
                 content: "";
-                transition: all .3s, transform 3s linear;
+                transition: all .3s, transform 10s linear;
                 border-radius: 100px;
                 left:50%;
                 top:50%;
@@ -401,11 +403,89 @@ body{
               }
             }
           }
+          >#artworkDetails{
+            width: 60%;
+            text-align: right;
+            >div{
+              display: flex;
+              justify-content: space-between;
+              >p{
+                display: flex;
+                gap: 1em;
+              }
+            }
+            >p{
+              >span{
+                &first-of-type{}
+              }
+            }
+            >button{
+              cursor:pointer;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          }
         }
       }
       >form{
         &.searchBar{
           // ....
+          >fieldset.searchBar__text_oSelect{
+            position: relative;
+            >label{
+              &::before{
+                cursor:pointer;
+                position: absolute;
+                bottom: 100%;
+                border: 5px solid;
+                border-bottom: 0;
+                padding: 0.25em;
+                border-radius: 10px 10px 0 0;
+              }
+              &.searchText_Popup{
+              }
+              &.searchSelect_Popup{
+                >select{
+                  color:white;
+                  border:solid;
+                  border-radius: 5px;
+                }
+                &:nth-of-type(n-1){
+                  &:hover::before{
+                    background:purple;
+                    color:white;
+                  }
+                  &::before{
+                    content:"genre";
+                    right: 0;
+                    color:purple;
+                    border-color:purple;
+                  }
+                  >select{
+                    border-color:purple;
+                    background:purple;
+                  }
+                }
+                &:last-of-type{
+                  &:hover::before{
+                    background:green;
+                    color:white;
+                  }
+                  &::before{
+                    content:"artiste";
+                    right: -2em;
+                    color:green;
+                    border-color:green;
+                  }
+                  >select{
+                    border-color:green;
+                    background:green;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       >aside{

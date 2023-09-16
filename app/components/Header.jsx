@@ -39,13 +39,13 @@ export default function Header() {
                 <UserButton afterSignOutUrl="/" />
             </SignedIn>
         </section>
-        <SignedIn>
+        {/* <SignedIn> */}
             <section className="cart">
                 <Link href="/panier">
                     <span>0</span>
                 </Link>
             </section>
-        </SignedIn>
+        {/* </SignedIn> */}
         <section className="search">
             <form onSubmit={e=>{ok(e)}}>
                 <input type="text" />

@@ -1,5 +1,5 @@
 'use client'
-import { useState, useContext } from "react"
+import { useState, useEffect, useContext } from "react"
 import GlobalContext from "../GlobalContext"
 import Craft from "./Craft"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
@@ -8,56 +8,85 @@ export default function ArtworkForm({ datas, artists, expos }) {
     console.log(datas)
     console.log(artists)
     console.log(expos)
-    const handleChangeType = (e) => {
-        const id = e.target.id
-            , artistsOptionTags = artists.map((elt, i) => <option key={"artistsOptionTags" + i} value={"artist_" + i}>{elt.pseudo} - {elt.nom} - {elt.prenom}</option>)
-            , exposOptionTags = expos.map((elt, i) => <option key={"exposOptionTags" + i} value={"oeuvre_" + i}>{elt.title}</option>)
-
-        setShowSelectionOptionTags(id == "radioExpos" ? { exposOptionTags } : { artistsOptionTags })
-        // setShowSelectionOptionTags(id == "radioExpos" ? <>{exposOptionTags}</> : <>{artistsOptionTags}</>)
-        alert(id)
+    const changeSelect = (hookArray,targetValue) => {
+        if(hookArray.includes(targetValue))
+            return [...hookArray.filter((item,i) => (item!==targetValue))]
+        return [...hookArray,targetValue]
     }
-        , handleChangeSelect = (e) => {
+    , handleChangeText = (e) => {
 
-            // setSelectedCrafts(FILTRER ICI datas POUR NE RÉCUPÉRER QUE LES OEUVRES CORREPSONDANTS)
-            alert("handleChangeSelect")
-        }
-        , handleChangeText = (e) => {
+        // setSelectedCrafts(FILTRER ICI datas POUR NE RÉCUPÉRER QUE LES OEUVRES CORREPSONDANTS)
+        alert("handleChangeText")
+    }
+    , handleChangeSubmit = (e,type,targetValue) => {
 
-            // setSelectedCrafts(FILTRER ICI datas POUR NE RÉCUPÉRER QUE LES OEUVRES CORREPSONDANTS)
-            alert("handleChangeText")
-        }
+        setSelectedCrafts(datas)        
+        
+        if(type=="genre")setFormSelectGenre([...changeSelect(formSelectGenre,targetValue)])
+        if(type=="artiste")setFormSelectArtiste([...changeSelect(formSelectArtiste,targetValue)])
+
+
+        // setSelectedCrafts(FILTRER ICI datas POUR NE RÉCUPÉRER QUE LES OEUVRES CORREPSONDANTS)
+    }
 
     let [selectedCrafts, setSelectedCrafts] = useState(datas)
-        , [showSelectionOptionTags, setShowSelectionOptionTags] = useState([<></>])
-        ,{asideModal, setAsideModal,asideModalContent} = useContext(GlobalContext)
+    , [formText, setFormText] = useState("")
+    , [formSelectGenre, setFormSelectGenre] = useState([])
+    , [formSelectArtiste, setFormSelectArtiste] = useState([])
+    // , [showSelectionOptionTags, setShowSelectionOptionTags] = useState([<></>])
+    , {asideModal, setAsideModal,asideModalContent} = useContext(GlobalContext)
+    , [genreList,__vide__] = useState(Array.from(new Set(selectedCrafts.map(item => item.genre))))
+    // console.log(genreList)
 
+    useEffect(() => {
+
+        console.log(formSelectGenre)
+        if(formSelectGenre.length)setSelectedCrafts(selectedCrafts.filter((item,i) => {
+            console.log("craft genre: "+item.genre+" ...."+formSelectGenre.join(','))
+            
+            return formSelectGenre.includes(item.genre)
+        }))
+        // if(formSelectArtiste.length)setSelectedCrafts(selectedCrafts.filter((item,i) => formSelectArtiste.includes(item["artistes_$_ref"])))
+        // LA CONDITION CI-DESSUS DOIT ETRE REFAITE LORSQUE LES DONNÉES DES POEUVRES COMPRENDRONT UN ARTISTE
+        
+    }, [formSelectGenre,formSelectArtiste])
 
 
     return <>
         <form className="searchBar">
-            <fieldset>
-                <fieldset className="searchBar__text_oSelect">
-                    <label>
-                        <input id="searchOeuvreText" onChange={handleChangeText} />
-                    </label>
-                    <label>
-                        <select id="searchOeuvreSelect" onChange={handleChangeSelect}>
-                            <option value="">default</option>
-                            {showSelectionOptionTags}
-                        </select>
-                    </label>
-                </fieldset>
-                <label>
-                    <span className="exposition">expositions</span>
-                    <input type="radio" onChange={handleChangeType} name="searchType" id="radioExpos" />
+            <fieldset className="searchBar__text_oSelect">
+                <label className="searchText_Popup">
+                    <input defaultValue={formText} className="searchText" onChange={handleChangeText} placeholder="Taper un nom d'oeuvre d'artiste de genre... ex: Religieux" />
                 </label>
-                <label>
-                    <span className="artistes">artistes</span>
-                    <input type="radio" onChange={handleChangeType} name="searchType" id="radioArtists" />
+                <label className="searchSelect_Popup genre">
+                    <select onChange={e => {handleChangeSubmit(e,"genre",e.target.value)}} 
+                    defaultValue={formSelectGenre.at(-1) || ""}
+                        // onFocus={e => {e.target.size=e.target.length}} 
+                        // onBlur={e => {e.target.size=1}}
+                    >
+                        <option value="">default</option>
+                        {genreList.map(item => <option value={item}>{item}</option>)}
+                        {/* {showSelectionOptionTags} */}
+                    </select>
+                </label>
+                <label className="searchSelect_Popup artiste">
+                    <select onChange={e => {handleChangeSubmit(e,"artiste",e.target.options[e.target.selectedIndex].innerHTML)}} 
+                        defaultValue={formSelectArtiste.at(-1) || ""}
+                        // onFocus={e => {e.target.size=e.target.length}} 
+                        // onBlur={e => {e.target.size=1}}
+                    >
+                        <option value="">default</option>
+                        {artists.map((item,i) => <option key={"artistsOptionTags" + i} value={"artist_" + i}>{item.pseudo} - {item.nom} - {item.prenom}</option>)}
+                        {/* {showSelectionOptionTags} */}
+                    </select>
                 </label>
             </fieldset>
-            <img id="contextualOeuvreImage" />
+            {/* <img id="contextualOeuvreImage" /> */}
+            <ouput>
+                {formSelectGenre.map((item,i) => <span>{item}</span>)}
+                <hr />
+                {formSelectArtiste.map((item,i) => <span>{item}</span>)}
+            </ouput>
         </form>
 
         <section className="figureCards">
