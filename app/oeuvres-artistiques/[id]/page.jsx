@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import {getOneArtwork} from "../../../lib/galerie"
+// import {getOneArtwork} from "../../../lib/galerie"
+import oeuvres_datas from "../oeuvres_datas.json"
 import AddToCartBtn from "./AddToCartBtn"
 
 
@@ -11,7 +12,8 @@ export const metadata = {
 export default async function page({params}) {
 
     const {id} = params
-    , artwork = await getOneArtwork(id)
+    // , artwork = await getOneArtwork(id)
+    , artwork = oeuvres_datas[id]
 
     console.log("artwork")
     console.log(artwork)

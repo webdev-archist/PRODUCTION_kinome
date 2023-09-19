@@ -508,19 +508,39 @@ body{
         }
         &#show_artiste{
           display: flex;
+          gap: 1em;
+          min-height: 300px;
           >ul{
             width: 30%;
+            position: relative;
+            >img{
+              position: absolute;
+              top: 0;
+              width: 50px;
+              z-index: 10;
+            }
             >li{
-              position: relative;
+              position: absolute;
               height: 200px;
+              width: 100%;
               >img{
-
               }
             }
           }
           >div{
+            width:60%;
             >p{
               >a{}
+            }
+          }
+          @include mobile-and-tablette{
+            flex-wrap: wrap;
+            min-height: 500px;
+            >ul{
+              width: 100%;
+            }
+            >div{
+              width:unset;
             }
           }
         }

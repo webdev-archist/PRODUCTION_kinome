@@ -1,5 +1,14 @@
 import Image from "next/image"
 export default ({artiste,birthdate}) => <section id="show_artiste">
+    <div>
+        <p>{artiste.nom} {artiste.prenom} alias {artiste.pseudo}, né en {birthdate} ({artiste.age})</p>
+        <p>{artiste.email} - {artiste.tel}</p>
+        <p>{artiste.genre}</p>
+        <p>{artiste.descr}</p>
+        <p>
+            {artiste.SNSs.map((item, i) => <a href={item} target="_blank" className="sns" title="vers réseau-social: "></a>)}
+        </p>
+    </div>
     <ul>
         <Image
             src={"/img/artistes/" + artiste["avatar_$_file"][0]}
@@ -15,13 +24,4 @@ export default ({artiste,birthdate}) => <section id="show_artiste">
             />
         </li>)}
     </ul>
-    <div>
-        <p>{artiste.nom} {artiste.prenom} alias {artiste.pseudo}, né en {birthdate} ({artiste.age})</p>
-        <p>{artiste.email} - {artiste.tel}</p>
-        <p>{artiste.genre}</p>
-        <p>{artiste.descr}</p>
-        <p>
-            {artiste.SNSs.map((item, i) => <a href={item} target="_blank" className="sns" title="vers réseau-social: "></a>)}
-        </p>
-    </div>
 </section>

@@ -6,8 +6,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo1.jpg",
-            "https://example.com/photo2.jpg"
+            "/img/test/img_3.jpg",
+            "/img/test/img_4.jpg"
         ],
         "slogan": "Une sculpture surréaliste",
         "title": "Le Téléphone",
@@ -22,8 +22,8 @@
         ],
         "released_$_date": "2023-08-22",
         "photos_$_file": [
-            "https://example.com/photo3.jpg",
-            "https://example.com/photo4.jpg"
+            "/img/test/img_1.jpg",
+            "/img/test/img_2.jpg"
         ],
         "slogan": "Une peinture impressionniste",
         "title": "Le Pont du Japon",
@@ -38,8 +38,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo5.jpg",
-            "https://example.com/photo6.jpg"
+            "/img/test/img_1.jpg",
+            "/img/test/img_2.jpg"
         ],
         "slogan": "Une sculpture abstraite",
         "title": "Formes et couleurs",
@@ -54,8 +54,8 @@
         ],
         "released_$_date": "2023-08-22",
         "photos_$_file": [
-            "https://example.com/photo7.jpg",
-            "https://example.com/photo8.jpg"
+            "/img/test/img_1.jpg",
+            "/img/test/img_3.jpg"
         ],
         "slogan": "Une photographie de nature morte",
         "title": "Nature morte aux fruits",
@@ -70,8 +70,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo9.jpg",
-            "https://example.com/photo10.jpg"
+            "/img/test/img_3.jpg",
+            "/img/test/img_4.jpg"
         ],
         "slogan": "Une sculpture moderne",
         "title": "L'Homme qui marche",
@@ -86,8 +86,8 @@
         ],
         "released_$_date": "2023-08-22",
         "photos_$_file": [
-            "https://example.com/photo11.jpg",
-            "https://example.com/photo12.jpg"
+            "/img/test/img_4.jpg",
+            "/img/test/img_1.jpg"
         ],
         "slogan": "Une peinture expressionniste",
         "title": "La Femme au chapeau",
@@ -102,8 +102,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo13.jpg",
-            "https://example.com/photo14.jpg"
+            "/img/test/img_2.jpg",
+            "/img/test/img_3.jpg"
         ],
         "slogan": "Une sculpture cubiste",
         "title": "Le Cube",
@@ -134,8 +134,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo17.jpg",
-            "https://example.com/photo18.jpg"
+            "/img/test/img_3.jpg",
+            "/img/test/img_4.jpg"
         ],
         "slogan": "Une sculpture monumentale",
         "title": "La Femme géante",
@@ -159,8 +159,8 @@
         ],
         "released_$_date": "2023-08-22",
         "photos_$_file": [
-            "https://example.com/photo19.jpg",
-            "https://example.com/photo20.jpg"
+            "/img/test/img_1.jpg",
+            "/img/test/img_2.jpg"
         ],
         "slogan": "Une peinture de grand format",
         "title": "Le Pont de Paris",
@@ -184,8 +184,8 @@
         ],
         "released_$_date": "2023-08-15",
         "photos_$_file": [
-            "https://example.com/photo21.jpg",
-            "https://example.com/photo22.jpg"
+            "/img/test/img_2.jpg",
+            "/img/test/img_3.jpg"
         ],
         "slogan": "Une sculpture abstraite minimaliste",
         "title": "Formes géométriques",
@@ -209,8 +209,8 @@
         ],
         "released_$_date": "2023-08-22",
         "photos_$_file": [
-            "https://example.com/photo23.jpg",
-            "https://example.com/photo24.jpg"
+            "/img/test/img_4.jpg",
+            "/img/test/img_1.jpg"
         ],
         "slogan": "Une photographie de rue",
         "title": "Un passant à Paris",

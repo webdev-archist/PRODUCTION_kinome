@@ -1,13 +1,16 @@
 import ShowArtiste from "./ShowArtiste"
 import ShowArtworks from "../../components/_/ShowArtworks"
-import {getOneArtist} from "../../../lib/galerie"
+// import {getOneArtist} from "../../../lib/galerie"
+import artistes_datas from "../artistes_datas.json"
 
 
 
 export default async ({ params }) => {
 
     console.log(params.id)
-    const artiste = await getOneArtist(params.id)
+    // const artiste = await getOneArtist(params.id)
+    const artiste = artistes_datas[params.id]
+    console.log(artiste)
     const birthdate = new Date(artiste?.["naissance_$_date"]).getFullYear()
     
     
@@ -17,6 +20,6 @@ export default async ({ params }) => {
 
     return <>
         <ShowArtiste artiste={artiste} birthdate={birthdate} />
-        <ShowArtworks />
+        {false && <ShowArtworks />}
     </>
 }

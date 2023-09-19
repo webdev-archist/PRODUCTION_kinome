@@ -29,7 +29,8 @@ export default function ArtworkForm({ datas, artists, expos }) {
         // setSelectedCrafts(FILTRER ICI datas POUR NE RÉCUPÉRER QUE LES OEUVRES CORREPSONDANTS)
     }
 
-    let [selectedCrafts, setSelectedCrafts] = useState(datas)
+    let [loaded, setLoaded] = useState(false)
+    , [selectedCrafts, setSelectedCrafts] = useState(datas)
     , [formText, setFormText] = useState("")
     , [formSelectGenre, setFormSelectGenre] = useState([])
     , [formSelectArtiste, setFormSelectArtiste] = useState([])
@@ -38,6 +39,9 @@ export default function ArtworkForm({ datas, artists, expos }) {
     , [genreList,__vide__] = useState(Array.from(new Set(selectedCrafts.map(item => item.genre))))
     // console.log(genreList)
 
+    useEffect(() => {
+        setLoaded(true)
+    }, [])
     useEffect(() => {
 
         console.log(formSelectGenre)
@@ -90,13 +94,13 @@ export default function ArtworkForm({ datas, artists, expos }) {
         </form>
 
         <section className="figureCards">
-            <ResponsiveMasonry
+            {loaded && <ResponsiveMasonry
                 columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
             >
                 <Masonry>
                     {selectedCrafts.map((elt, i) => <Craft key={"selectedCrafts" + i} data={elt} i={i}setAsideModal={setAsideModal} />)}
                 </Masonry>
-            </ResponsiveMasonry>
+            </ResponsiveMasonry>}
         </section>
         {asideModal===false && <aside className="modalL">{asideModalContent&&<img src={asideModalContent}/>}</aside>}
         {asideModal && <aside className="modalR">{asideModalContent&&<img src={asideModalContent}/>}</aside>}
