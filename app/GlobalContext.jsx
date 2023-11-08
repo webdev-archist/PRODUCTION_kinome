@@ -4,6 +4,8 @@ import { createContext, useState, useEffect, useRef } from 'react'
 import expos_datas from "./expositions-gallerie-art-kynome/expos_datas.json"
 import artistes_datas from "./artistes-panafricains/artistes_datas.json"
 import oeuvres_datas from "./oeuvres-artistiques/oeuvres_datas.json"
+import carousels from "../assets/interfaces/carousels.js"
+// import carousels from "@_/assets/interfaces/carousels"
 
 
 const GlobalContext = createContext()
@@ -16,7 +18,17 @@ export const GlobalContextProvider = ({ children }) => {
     , myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
     }
-    
+    , settingsSlider = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        adaptiveHeight: true
+    }
     
 
     expos_datas.sort((a,b) => (new Date(a["openningDate_$_date"]) - new Date(b["openningDate_$_date"])))
@@ -43,12 +55,12 @@ export const GlobalContextProvider = ({ children }) => {
 
 
 
-    const context = {dates, currentExpo, activedExpoImageRef
+    const context = {carousels, dates, currentExpo, activedExpoImageRef
         , activedExpo, setActivedExpo, dates_before, setDates_before, dates_after, setDates_after
         , artistes_datas, oeuvres_datas
         , showArtist, setShowArtist
         , asideModal, setAsideModal, asideModalContent, setAsideModalContent
-        , myLoader
+        , myLoader, settingsSlider
     }
     return <GlobalContext.Provider value={context}>
         {children}

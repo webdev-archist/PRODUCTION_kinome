@@ -5,6 +5,7 @@ import Link from 'next/link'
 // import Image from "next/image"
 // import './page.module.css'
 import Diapo from "./components/_/Diapo"
+import ArticleSlider from "./components/_/ArticleSlider"
 import NowExpo from "./index/NowExpo"
 import ListLastExpos from "./index/ListLastExpos"
 import KynomePost from "./index/KynomePost"
@@ -20,9 +21,15 @@ export const metadata = {
 }
 
 export default function Home() {
+
+
+  
   return (<>
     <main id="home">
-      <Diapo />
+      <ArticleSlider/>
+      {/* <Diapo /> */}
+
+      
       {/* <NowExpo/>
       <ListLastExpos/> */}
       <KynomePost />

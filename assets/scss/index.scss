@@ -38,13 +38,16 @@
           display: flex;
           align-items: center;
           text-align: center;
-          >section{
+          >section,>figure{
             height: 100%;
             width: 45%;
             >h1{}
             >h4{}
             >p{}
-            >img{object-fit: contain;}
+            >img{
+              height: 100%;
+              object-fit: contain;
+            }
           }
         }
       }
@@ -202,10 +205,85 @@ body{
       &#kynome{
         margin-bottom: 0;
         padding-bottom: 0;
+        @include mobile-only{
+          iframe{
+            width:100%;
+            margin: 0 !important;
+          }
+        }
+        @include from-tablette{
+          iframe{
+            margin: 2em !important;
+          }
+        }
+        >h2{}
+        >p{
+          font-size: 1.3em;
+          line-height: 1.45em;
+          >iframe{
+            float:left;
+          }
+          
+        }
+        >iframe{
+          float: right;
+        }
       }
       &#fondateurs{
         >ul{
           @extend %cards_block;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          >li{
+            position: absolute;
+            background: white;
+            // @extend %go_tbl;
+            // @extend %go_tbr;
+            top:1em;
+            height:100px;
+            width:100px;
+            
+            
+            // &:first-child:has(:not(+:last-child)),&:last-child:hover{
+            // &:first-child:not(:has(+*:last-child)),&:last-child:hover{
+            &:first-child,&:first-child:hover,&:last-child:hover{
+              position: relative;
+              z-index: 10;
+              top:unset;
+              left:unset;
+              right:unset;
+              width:unset;
+              height:unset;
+              // bottom:unset;
+            }
+            // &:first-child:has(+li:hover){left:1em;}
+            &:last-child{right:1em;
+              position: absolute !important;
+              z-index: 20;
+              bottom:1em;top:1em!important;
+              overflow: hidden;
+              &:hover{
+                left: 1em;
+                right: 1em;            
+                >div{
+                  // opacity: 1;
+                  display: flex;
+                }
+              }
+              >img{width: 100% !important;}
+              >div{
+                // opacity: 0;
+                display: none;
+                >img{
+                  width:100% !important;
+                }
+              }
+            }
+            >img{
+              height: 100%;
+            }
+          }
         }
       }
       &#listLastExpos,&#nowExpo{
