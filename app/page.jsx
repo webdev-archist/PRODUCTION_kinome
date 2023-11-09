@@ -35,7 +35,7 @@ export default function Home() {
       <KynomePost />
       <Fondateurs />
       <hr />
-      <Location />
+      {/* <Location /> */}
       <Contact />
       {/*
       <section className="topArtists">
